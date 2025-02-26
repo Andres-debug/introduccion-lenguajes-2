@@ -70,6 +70,9 @@ const prompt = require("prompt-sync")();
 let estudiantes = [
     {nombre:"Juan",calificacion: 90},
     {nombre:"Pedro",calificacion: 50},
+    {nombre:"Maria",calificacion: 30},
+    {nombre:"Ana",calificacion: 100},
+    {nombre:"Laura",calificacion: 45},
 ]
 
 function agregarEstudiante(){
@@ -121,7 +124,18 @@ function calcularPromedio(){
     console.log(`Promedio de calificaciones: ${(sum/estudiantes.length).toFixed(2)}`)
 }
 
-calcularPromedio()
+function mostrarCalificacionesExtremas(){
 
+    if(estudiantes.length===0){
+        console.log("No hay datos")
+        return
+    }
 
-console.log(estudiantes)
+    let calificaciones = estudiantes.map(estudiante=>estudiante.calificacion)
+    
+    console.log(`Calificacion mas alta: ${Math.max(...calificaciones)}`)
+    console.log(`Calificacion mas baja: ${Math.min(...calificaciones)}`)
+
+}
+
+mostrarCalificacionesExtremas()
