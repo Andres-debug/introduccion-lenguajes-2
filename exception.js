@@ -85,6 +85,21 @@ function agregarEstudiante(){
     console.log("Estudiante agregado")
 }
 
-agregarEstudiante();
+function eliminarEstudiante(){
+    let nombre = prompt("Ingrese el nombre del estudiante: ");
+    let index = estudiantes.findIndex(estudiante=>
+        estudiante.nombre.toLowerCase()== nombre.toLowerCase())
+    
+        if(index !== -1){
+            estudiantes.splice(index,1)
+            console.log("Estudiante eliminado")
+        
+        }else{
+            console.log("Estudiante no encontrado")
+        }
+}
+
+eliminarEstudiante()
+
 
 console.log(estudiantes)
