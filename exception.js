@@ -111,5 +111,17 @@ function mostrarEstudiantes(){
     })
 }
 
-mostrarEstudiantes();
+function calcularPromedio(){
+    if(estudiantes.length===0){
+        console.log("No hay calificaciones registradas")
+        return
+    }
+
+    let sum = estudiantes.reduce((total,estudiante)=>total + estudiante.calificacion,0)
+    console.log(`Promedio de calificaciones: ${(sum/estudiantes.length).toFixed(2)}`)
+}
+
+calcularPromedio()
+
+
 console.log(estudiantes)
