@@ -99,7 +99,17 @@ function eliminarEstudiante(){
         }
 }
 
-eliminarEstudiante()
+function mostrarEstudiantes(){
 
+    if(estudiantes.length===0){
+        console.log("No hay estudinates registrados")
+        return;
+    }
+    console.log("Lista de estudiantes");
+    estudiantes.forEach(estudiante=>{
+        console.log(`-${estudiante.nombre}: ${estudiante.calificacion}`)
+    })
+}
 
+mostrarEstudiantes();
 console.log(estudiantes)
