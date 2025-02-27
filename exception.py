@@ -43,5 +43,25 @@ def eliminar_estudiante():
     estudiantes = [estudiante for estudiante in estudiantes if estudiante["nombre"].lower() != nombre.lower()]
     print("Estudiante eliminado correctamente")
 
-eliminar_estudiante()
-print(estudiantes)
+def mostrar_estudiantes():
+    if not estudiantes:
+        print("No hay estudiantes registrados")
+        return
+    print("Lista de estudiantes: ")
+    for estudiante in estudiantes:
+        print(f"-{estudiante["nombre"]}: {estudiante["calificacion"]}")
+
+def calcular_promedio():
+    if not estudiantes:
+        print("No hay estudiantes registrados")
+        return
+    promedio = sum(estudiante["calificacion"] for estudiante in estudiantes) / len(estudiantes)
+    print(f"Promedio de calificaciones: {promedio:.2f}")
+
+def mostrar_calificaciones_extremas():
+    if not estudiantes:
+        print("No hay calificaciones")
+        return
+    calificaciones = [estudiante["calificacion"] for estudiante in estudiantes]
+    print(f"Calificacion mas alta: {max(calificaciones)}")
+    print(f"Calificacion mas baja: {min(calificaciones)}")
