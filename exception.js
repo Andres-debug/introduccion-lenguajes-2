@@ -137,5 +137,41 @@ function mostrarCalificacionesExtremas(){
     console.log(`Calificacion mas baja: ${Math.min(...calificaciones)}`)
 
 }
+flag= true
 
-mostrarCalificacionesExtremas()
+while(flag===true){
+    console.log("\n Sistema de Gestion de Estudiantes")
+    console.log("1.Agregar Estudiante")
+    console.log("2.Eliminar Estudiante")
+    console.log("3.Mostrar Estudiantes")
+    console.log("4.Calcular Promedio Estudiantes")
+    console.log("5.Mostrar calificacion mas alta y mas baja")
+    console.log("6.Salir")
+
+    let opcion = prompt("Seleccione una opcion: ")
+
+    switch(opcion){
+
+        case "1":
+            agregarEstudiante();
+            break;
+        case "2":
+            eliminarEstudiante();
+            break;
+        case "3":
+            mostrarEstudiantes();
+            break;
+        case "4":
+            calcularPromedio();
+            break;
+        case "5":
+            mostrarCalificacionesExtremas();
+            break
+        case "6":
+            console.log("Saliendo del sistema")
+            flag === false
+            break
+        default:
+            console.log("Opcion no valida")
+    }
+}
