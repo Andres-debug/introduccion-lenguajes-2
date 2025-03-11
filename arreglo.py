@@ -12,9 +12,15 @@ numeros = [10,20,30,40,67,89,8,5,22]
 # del numeros[4] #Elimina por indice
 # print(numeros)
 
-numeros.sort() #Orden ASC
-print(numeros)
-numeros.sort(reverse=True) #Orden DESC
+# numeros.sort() #Orden ASC
+# print(numeros)
+# numeros.sort(reverse=True) #Orden DESC
 
-mayores_de_10 = [num for num in numeros if num >10] #filter
-print(mayores_de_10)
+# mayores_de_10 = [num for num in numeros if num >10] #filter
+# print(mayores_de_10)
+
+dobles = [num *2 for num in numeros] #Transforma los datos y lso multiplica por 2
+print(dobles)
+
+suma = sum(numeros)
+print(suma)

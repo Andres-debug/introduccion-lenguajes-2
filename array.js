@@ -18,3 +18,10 @@ let numeros = [10,20,30,50,85,3,23,11,5]
 
 // let mayoresDe10 = numeros.filter(num=> num>10) // Metodo filtrar
 // console.log(mayoresDe10)
+
+let dobles = numeros.map(num => num*2) //Transforma los datos y los multiplica por 2
+console.log(dobles)
+
+let suma = numeros.reduce((total,num)=> total +num,0)// Acumula valores
+//total es la variable que va acumular los valores y num la variable iteradora
+console.log(suma)
